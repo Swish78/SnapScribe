@@ -1,135 +1,121 @@
 # SnapScribe
 
-SnapScribe is a real-time audio transcription and summarization app that leverages machine learning to convert speech to text and summarize key points. Ideal for meetings, lectures, interviews, and personal note-taking, SnapScribe provides an efficient way to capture and review spoken content.
+SnapScribe is a real-time audio transcription and summarization app that leverages machine learning to convert speech to text and summarize key points. Designed for meetings, lectures, interviews, and personal note-taking, SnapScribe provides an efficient way to capture, organize, and review spoken content.
 
 ## Features
 
-- **Real-Time Audio Transcription:**
-  - Converts live audio into text in real-time.
-  - Supports multiple languages and accents.
-  - Offers speaker identification to differentiate between multiple speakers.
+### Real-Time Audio Transcription
+- Converts live audio into text in real-time.
+- Supports multiple languages and accents.
+- Differentiates between multiple speakers using speaker identification.
 
-- **Text Summarization:**
-  - Summarizes transcribed text into concise key points.
-  - Provides options for different summary lengths (e.g., brief, detailed).
-  - Highlights important phrases and keywords.
+### Text Summarization
+- Summarizes transcribed text into concise key points.
+- Offers options for different summary lengths (e.g., brief, detailed).
+- Highlights important phrases and keywords for better context.
 
-- **Searchable Transcripts:**
-  - Allows users to search for specific keywords or phrases within transcripts.
-  - Provides timestamps for easier navigation.
+### Voice Recognition
+- Identifies individual speakers by recognizing their unique voice profiles.
+- Annotates transcripts with speaker names for improved clarity.
+- Allows users to manage and update their voice profiles.
 
-- **Export and Share:**
-  - Exports transcripts and summaries to various formats (e.g., PDF, DOCX).
-  - Shares transcripts and summaries via email or cloud services.
+### Searchable Transcripts
+- Enables users to search for specific keywords or phrases within transcripts.
+- Provides timestamps for easier navigation through the content.
 
-- **User Management:**
-  - Supports user authentication and profile management.
-  - Allows users to manage their saved transcripts and summaries.
+### Export and Share
+- Exports transcripts and summaries to various formats such as PDF and DOCX.
+- Allows sharing via email or cloud services for seamless collaboration.
+
+### User Management
+- Secure user authentication and profile management.
+- Stores and organizes saved transcripts and summaries for easy access.
 
 ## Technology Stack
 
-- **Frontend:**
-  - React
-  - Tailwind CSS
-  - WebSockets
+### Frontend
+- **React**: For building an interactive user interface.
+- **Tailwind CSS**: For modern and responsive design.
+- **WebSockets**: To enable real-time communication for live transcription.
 
-- **Backend:**
-  - FastAPI
-  - WebSockets
-  - TensorFlow/PyTorch
-  - Hugging Face Transformers
+### Backend
+- **FastAPI**: A high-performance web framework for building APIs.
+- **WebSockets**: For real-time data exchange.
+- **TensorFlow / PyTorch**: For machine learning models.
+- **Hugging Face Transformers**: For transcription, summarization, and voice recognition tasks.
+- **pyannote.audio / SpeechBrain**: For speaker identification and voice recognition.
 
-## Getting Started
+### Database
+- **MongoDB** or **PostgreSQL**: For storing user data, transcripts, and voice profiles.
+
+## Installation
 
 ### Prerequisites
+- Python 3.8 or higher
+- Node.js 16 or higher
+- npm or yarn
+- Virtual environment manager (e.g., venv or conda)
 
-- Node.js
-- Python 3.7+
-- FastAPI
-- TensorFlow/PyTorch
-- Hugging Face Transformers
-
-### Installation
-
-1. **Clone the repository:**
+### Steps
+1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/SnapScribe.git
-   cd SnapScribe
+   git clone https://github.com/yourusername/snapscribe.git
    ```
-
-2. **Frontend Setup:**
+2. Navigate to the backend directory and install dependencies:
    ```bash
-   cd frontend
-   npm install
-   npm start
-   ```
-
-3. **Backend Setup:**
-   ```bash
-   cd backend
-   python -m venv venv
-   source venv/bin/activate # On Windows: venv\Scripts\activate
+   cd snapscribe/backend
    pip install -r requirements.txt
+   ```
+3. Navigate to the frontend directory and install dependencies:
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+4. Start the backend server:
+   ```bash
    uvicorn main:app --reload
    ```
-
-### Project Structure
-
-```
-SnapScribe/
-├── backend/
-│   ├── app/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   └── utils/
-│   ├── main.py
-│   └── requirements.txt
-├── frontend/
-│   ├── public/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   └── App.js
-│   ├── package.json
-│   └── tailwind.config.js
-└── README.md
-```
-
-### Usage
-
-1. **Start the Backend Server:**
+5. Start the frontend development server:
    ```bash
-   cd backend
-   uvicorn main:app --reload
-   ```
-
-2. **Start the Frontend Development Server:**
-   ```bash
-   cd frontend
    npm start
    ```
 
-3. Open your browser and navigate to `http://localhost:3000` to start using SnapScribe.
+## Usage
+
+1. Open the application in your browser.
+2. Log in or create an account to access features.
+3. Upload or provide live audio input for transcription.
+4. View real-time transcription and summaries.
+5. Manage, search, and export your transcripts and summaries.
 
 ## Contributing
 
-Contributions are welcome! Please open an issue or submit a pull request.
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/YourFeature`)
-3. Commit your changes (`git commit -m 'Add some feature'`)
-4. Push to the branch (`git push origin feature/YourFeature`)
-5. Open a pull request
+We welcome contributions! To contribute:
+1. Fork the repository.
+2. Create a new branch for your feature or bugfix:
+   ```bash
+   git checkout -b feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add feature-name"
+   ```
+4. Push the branch to your fork:
+   ```bash
+   git push origin feature-name
+   ```
+5. Create a pull request on the main repository.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the [MIT License](LICENSE).
 
-## Acknowledgments
+[//]: # (## Acknowledgments)
 
-- [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [FastAPI](https://fastapi.tiangolo.com/)
-- [TensorFlow](https://www.tensorflow.org/)
-- [PyTorch](https://pytorch.org/)
-- [Hugging Face](https://huggingface.co/)
+[//]: # ()
+[//]: # (- **OpenAI Whisper** and **Hugging Face Transformers** for their powerful transcription and summarization tools.)
+
+[//]: # (- **pyannote.audio** and **SpeechBrain** for speaker identification support.)
+
+[//]: # (- **FastAPI** and **React** for enabling rapid development of robust web applications.)
+
